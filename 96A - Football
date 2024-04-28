@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string t;
+
+    cin >> t;
+
+    int i;
+    int conta = 1;
+
+    for(i = 0; i < t.size(); i++){
+        if(t[i] == t[i+1]){
+            conta++;
+        }else{
+            conta = 1;
+        }
+
+        if(conta == 7){
+            cout << "YES" << endl;
+            break;
+        }
+    }
+
+    if(conta < 7){
+        cout << "NO" << endl;
+    }
+
+    return 0;
+}
