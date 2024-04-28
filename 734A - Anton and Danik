@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cin >> n;
+    string win;
+
+    cin >> win;
+
+    int win_a = 0;
+    int win_d = 0;
+
+    int i;
+
+    for(i = 0; i < win.size(); i++){
+        if(win[i] == 'A'){
+            win_a++;
+        }else{
+            win_d++;
+        }
+    }
+
+    if(win_a > win_d){
+        cout << "Anton" << endl;
+    }else if(win_a < win_d){
+        cout << "Danik" << endl;
+    }else{
+        cout << "Friendship" << endl;
+    }
+
+    return 0;
+}
